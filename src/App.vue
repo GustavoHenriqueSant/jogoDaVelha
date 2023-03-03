@@ -1,15 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  
+  <WellcomeSection v-if="namePlayerTwo === ''"/>
+  <congratulations v-if="winnerPlayer !== 0"/>
+
+  <NavCabecalho/>
+
+  <JogoVelha class="jogo_da_velha"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavCabecalho from './components/Nav-Cabecalho.vue'
+import JogoVelha from './components/Jogo-da-Velha.vue'
+import WellcomeSection from './components/WellcomeSection.vue'
+import Congratulations from './components/CongratulationsSection.vue'
+import store from '@/store/store'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    NavCabecalho,
+    JogoVelha,
+    WellcomeSection,
+    Congratulations
+  },
+  computed: {
+    namePlayerTwo () {
+      return store.state.namePlayerTwo
+    },
+    winnerPlayer() {
+      return store.state.winnerPlayer !== 0 ? (store.state.winnerPlayer === 1 ? store.state.namePlayerOne : store.state.namePlayerTwo) : 0
+    }
   }
 }
 </script>
@@ -21,6 +41,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
 }
 </style>
