@@ -4,10 +4,10 @@
 
 ## Indice:
 
-- [Instalação](##instalação:)
-  - [Configuração do projeto](###Configuração do projeto:)
-  - [Compilação](###Compilação:)
-- [Sobre](##Sobre:)
+- [Instalação](#instalação)
+  - [Configuração do projeto](#configuração-do-projeto)
+  - [Compilação](#compilação)
+- [Sobre](#sobre)
 
 
 
