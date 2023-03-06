@@ -4,8 +4,10 @@
 
 ## Indice:
 
-- Instalação
-- sobre
+- [Instalação](#instalação:)
+  - [Configuração do projeto](#Configuração do projeto:)
+  - [Compilação](#Compilação:)
+- [Sobre](#Sobre:)
 
 
 
